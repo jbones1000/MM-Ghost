@@ -1,4 +1,4 @@
-#N canvas 22 25 1380 819 12;
+#N canvas 85 232 1380 819 12;
 #X obj 49 755 dac~ 1 2;
 #X msg 346 116 0 10000;
 #X obj 326 150 list prepend lfo-rate;
@@ -167,11 +167,11 @@
 #N canvas 92 117 450 300 connect 1;
 #X obj 34 41 inlet;
 #X obj 34 125 netreceive -u;
-#X msg 34 86 listen 3000;
 #X obj 34 149 s udp-messi;
-#X connect 0 0 2 0;
-#X connect 1 0 3 0;
-#X connect 2 0 1 0;
+#X msg 34 86 listen 3001;
+#X connect 0 0 3 0;
+#X connect 1 0 2 0;
+#X connect 3 0 1 0;
 #X restore 20 447 pd connect;
 #X obj 21 335 t b b;
 #X obj 20 382 del 2000;
