@@ -17,7 +17,7 @@
 #X obj 776 366 lop~ 3;
 #X obj 776 199 * 100;
 #X obj 776 223 + 30;
-#N canvas 92 117 1177 668 osc-bank 0;
+#N canvas 174 93 1177 668 osc-bank 0;
 #X obj 177 126 list prepend lfo-rate;
 #X obj 177 164 list trim;
 #X obj 46 68 list prepend amp;
@@ -35,7 +35,7 @@
 #X obj 709 463 list trim;
 #X obj 578 367 list prepend amp;
 #X obj 561 439 r~ root-sig;
-#X obj 586 516 throw~ bus;
+#X obj 561 516 throw~ bus;
 #X obj 578 307 r trig;
 #X obj 971 577 list prepend lfo-rate;
 #X obj 971 615 list trim;
@@ -54,7 +54,7 @@
 #X obj 57 390 list prepend amp;
 #X obj 40 462 r~ root-sig;
 #X obj 65 539 throw~ bus;
-#X obj 57 330 r trig;
+#X obj 57 320 r trig;
 #X obj 188 355 r trig;
 #X obj 1183 722 list prepend lfo-rate;
 #X obj 1183 760 list trim;
@@ -88,7 +88,7 @@
 #X msg 578 67 1 30000;
 #X msg 649 80 0 15000;
 #X msg 188 389 1 30000;
-#X msg 57 363 1 10000;
+#X msg 57 353 1 10000;
 #X msg 971 488 1 60000;
 #X msg 531 642 1 60000;
 #X msg 709 399 1 60000;
@@ -129,9 +129,9 @@
 #X msg 634 597 0 20000;
 #X msg 713 596 0.5 20000;
 #X obj 823 615 +~;
-#X obj 135 315 r fall;
+#X obj 123 325 r fall;
 #X obj 117 9 r fall;
-#X obj 647 314 r fall;
+#X obj 647 304 r fall;
 #X msg 647 338 0 10000;
 #X obj 26 194 ghost-voice~ 1 1.5 1.5 1 0;
 #X obj 392 193 ghost-voice~ -3.3333 6 1.25 1 2;
@@ -184,7 +184,7 @@
 #X connect 13 0 11 0;
 #X restore 1223 49 pd noise;
 #X obj 818 275 ghost-voice~ 2 8 1.9 1 1;
-#X obj 586 492 ghost-voice~ 6 12 2 1 3;
+#X obj 561 492 ghost-voice~ 6 12 2 1 3;
 #X obj 823 644 ghost-voice~ -9 24 2.1 1 4;
 #X obj 408 768 ghost-voice~ 11.1 32 1.5 1 5;
 #X obj 1060 789 ghost-voice~ -13 47 1.3333 1 6;
@@ -345,6 +345,9 @@
 #X obj 242 332 r buttons;
 #X obj 242 356 moses 12;
 #X obj 295 401 - 12;
+#X obj 241 153 r buttons;
+#X obj 241 177 sel 23;
+#X obj 241 215 s all-on;
 #X connect 1 0 6 0;
 #X connect 3 0 2 0;
 #X connect 6 0 4 0;
@@ -389,3 +392,5 @@
 #X connect 53 0 54 0;
 #X connect 54 1 55 0;
 #X connect 55 0 45 0;
+#X connect 56 0 57 0;
+#X connect 57 0 58 0;
