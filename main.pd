@@ -364,10 +364,10 @@
 #X obj 499 543 t a a, f 14;
 #X obj 594 567 * 100;
 #X obj 594 591 i;
-#X msg 594 632 1: Noise Vol: \$1%;
 #X obj 594 659 s screenLine2;
 #X obj 499 677 s noise-vol;
 #X obj 499 459 r knob2;
+#X msg 594 632 2: Noise Vol: \$1%;
 #X connect 1 0 4 0;
 #X connect 4 0 2 0;
 #X connect 4 0 3 0;
@@ -414,9 +414,9 @@
 #X connect 54 0 30 0;
 #X connect 56 0 57 0;
 #X connect 57 0 58 0;
-#X connect 58 0 63 0;
+#X connect 58 0 62 0;
 #X connect 58 1 59 0;
 #X connect 59 0 60 0;
-#X connect 60 0 61 0;
-#X connect 61 0 62 0;
-#X connect 64 0 58 0;
+#X connect 60 0 64 0;
+#X connect 63 0 58 0;
+#X connect 64 0 61 0;
